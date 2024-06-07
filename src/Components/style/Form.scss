@@ -1,0 +1,71 @@
+.formbase {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    gap: 1rem;
+
+  .formtitle {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    color: rgb(46, 46, 46);
+  }
+
+  .mainForm {
+    background: rgb(51, 61, 242);
+    background: linear-gradient(
+      122deg,
+      rgba(51, 61, 242, 1) 0%,
+      rgba(95, 54, 238, 1) 33%,
+      rgba(184, 40, 231, 1) 100%
+    );
+
+    width: 100%;
+
+    border: 1px solid purple;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // margin: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+
+    .row {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+
+.forminput {
+  border: none;
+  border-bottom: 2px solid purple;
+  background: rgba($color: #000000, $alpha: 0);
+  &::placeholder {
+    color: black;
+    font-weight: bolder;
+  }
+}
+
+
+.formsubmitbtn{
+
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 1px solid purple;
+    color:purple;
+    font-weight: bold;
+    background: rgba($color: #000000, $alpha: 0);
+    cursor: pointer;
+
+    &:hover{
+        color: white;
+        background-color: purple;
+        
+    }
+}
