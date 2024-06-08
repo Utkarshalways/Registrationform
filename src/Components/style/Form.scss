@@ -15,13 +15,13 @@
   }
 
   .mainForm {
-    background: rgb(51, 61, 242);
-    background: linear-gradient(
-      122deg,
-      rgba(51, 61, 242, 1) 0%,
-      rgba(95, 54, 238, 1) 33%,
-      rgba(184, 40, 231, 1) 100%
-    );
+    // background: rgb(51, 61, 242);
+    // background: linear-gradient(
+    //   122deg,
+    //   rgba(51, 61, 242, 1) 0%,
+    //   rgba(95, 54, 238, 1) 33%,
+    //   rgba(184, 40, 231, 1) 100%
+    // );
 
     width: 100%;
 
@@ -50,6 +50,17 @@
     color: black;
     font-weight: bolder;
   }
+
+   width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  // background-color: #fff;
+  // border: 1px solid #caced1;
+  // border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+
+  
 }
 
 
