@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./style/Form.scss"
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -55,117 +56,138 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div>
-      <h2>RegiForm Deluxe</h2>
-      <form onSubmit={handleSubmit} className="mainform">
-        <div className="row">
-          <label>First Name</label>
+    <div className="formbase">
+      <h2 className="formtitle">Please Fill this form</h2>
+      <form onSubmit={handleSubmit} className="mainForm">
+        <div className="col">
           <input
             type="text"
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            placeholder="First Name"
+            className="forminput"
           />
-          {errors.firstName && <span>{errors.firstName}</span>}
+          {<span>{errors.firstName}</span>}
         </div>
-        <div>
-          <label>Last Name</label>
+        <div className="col">
           <input
             type="text"
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            placeholder="Last Name"
+            className="forminput"
           />
-          {errors.lastName && <span>{errors.lastName}</span>}
+          {<span>{errors.lastName}</span>}
         </div>
-        <div>
-          <label>Username</label>
+        <div className="col">
           <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
+            placeholder="username"
+            className="forminput"
           />
-          {errors.username && <span>{errors.username}</span>}
+          {<span>{errors.username}</span>}
         </div>
-        <div>
-          <label>Email</label>
+        <div className="col">
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Email"
+            className="forminput"
           />
-          {errors.email && <span>{errors.email}</span>}
+          {<span>{errors.email}</span>}
         </div>
-        <div>
-          <label>Password</label>
-          <input
-            type={showPassword ? "text" : "password"}
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-          <button type="button" onClick={() => setShowPassword(!showPassword)}>
-            {showPassword ? "Hide" : "Show"}
-          </button>
-          {errors.password && <span>{errors.password}</span>}
+
+        <div className="col">
+          <div className="row">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="password"
+              className="forminput"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="formsubmitbtn"
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
+          {<span>{errors.password}</span>}
         </div>
-        <div>
-          <label>Phone No.</label>
+        <div className="col">
           <input
             type="text"
             name="phoneNo"
             value={formData.phoneNo}
             onChange={handleChange}
+            placeholder="Phone no"
+            className="forminput"
           />
-          {errors.phoneNo && <span>{errors.phoneNo}</span>}
+          {<span>{errors.phoneNo}</span>}
         </div>
-        <div>
-          <label>Country</label>
+
+        <div className="col">
           <select
             name="country"
             value={formData.country}
             onChange={handleChange}
+            className="forminput"
           >
             <option value="">Select Country</option>
             <option value="India">India</option>
             <option value="USA">USA</option>
             <option value="UK">UK</option>
           </select>
-          {errors.country && <span>{errors.country}</span>}
+          {<span>{errors.country}</span>}
         </div>
-        <div>
-          <label>City</label>
-          <select name="city" value={formData.city} onChange={handleChange}>
+        <div className="col">
+          <select
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+            className="forminput"
+          >
             <option value="">Select City</option>
             <option value="Mumbai">Mumbai</option>
             <option value="New York">New York</option>
             <option value="London">London</option>
           </select>
-          {errors.city && <span>{errors.city}</span>}
+          {<span>{errors.city}</span>}
         </div>
-        <div>
-          <label>PAN No.</label>
+
+        <div className="col">
           <input
             type="text"
             name="panNo"
             value={formData.panNo}
             onChange={handleChange}
+            placeholder="Pan no"
+            className="forminput"
           />
-          {errors.panNo && <span>{errors.panNo}</span>}
+          {<span>{errors.panNo}</span>}
         </div>
-        <div>
-          <label>Aadhar No.</label>
+        <div className="col">
           <input
             type="text"
             name="aadharNo"
             value={formData.aadharNo}
             onChange={handleChange}
+            placeholder="aadhar No"
+            className="forminput"
           />
-          {errors.aadharNo && <span>{errors.aadharNo}</span>}
+          {<span>{errors.aadharNo}</span>}
         </div>
-        <button type="submit" disabled={!isFormValid}>
+        <button type="submit" disabled={!isFormValid} className="formsubmitbtn">
           Submit
         </button>
       </form>

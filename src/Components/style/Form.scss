@@ -15,13 +15,13 @@
   }
 
   .mainForm {
-    // background: rgb(51, 61, 242);
-    // background: linear-gradient(
-    //   122deg,
-    //   rgba(51, 61, 242, 1) 0%,
-    //   rgba(95, 54, 238, 1) 33%,
-    //   rgba(184, 40, 231, 1) 100%
-    // );
+    background: rgb(51, 61, 242);
+    background: linear-gradient(
+      122deg,
+      rgba(51, 61, 242, 1) 0%,
+      rgba(95, 54, 238, 1) 33%,
+      rgba(184, 40, 231, 1) 100%
+    );
 
     width: 100%;
 
@@ -38,6 +38,12 @@
     .row {
       display: flex;
       gap: 1rem;
+    }
+
+    .col{
+
+      display: flex;
+      flex-direction: column;
     }
   }
 }
